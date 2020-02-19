@@ -1,0 +1,124 @@
+/*Author: Ilakiya S;
+ *Title: FlowerPoster;
+ *Version: 1.0;
+ *Date: 19-Feb-2020;
+ */
+
+h2 {
+    font-family: Arial;
+    color: midnightblue;
+    font-size: x-large;
+}
+
+.mainDiv {   
+    width: 750px;
+    height: 1000px;
+    border: 3px solid silver;
+    margin:auto;
+}
+
+.line {
+    border: 10px solid greenyellow;
+}
+
+.lineBottom {
+    border: 1px solid greenyellow;
+    width:97%;
+  
+}
+
+.img {
+    margin-left: 75px;
+    margin-top: 35px;
+}
+
+.footer {
+    background-color: lawngreen;
+    text-emphasis-color: blue;
+    background-size: 20px;
+}
+
+select.classic {
+    background-image: linear-gradient(45deg, transparent 10%, blue 25%), linear-gradient(135deg, blue 25%, transparent 25%), linear-gradient(to right, skyblue, skyblue);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 0px 0px, 0px 0px, 2em 2em;
+    background-repeat: no-repeat;
+}
+
+.left {
+    float: left;
+    width:30%
+}
+
+.right {
+    float: right;
+    width: 70%;
+    position: relative;
+}
+
+.imageStyle {
+    margin-left: 424px;
+    margin-bottom: 12px;
+    margin-top: -400px;
+    height: 80px;
+    width: 80px;
+}
+
+.imageStyleQuestion {
+    height: 15px;
+    width: 15px;
+    margin-left: 95%;  
+    margin-bottom: -4px;
+    margin-top:10px;
+}
+
+.imageStyleQuestionMark {
+    height: 15px;
+    width: 15px;
+    margin-left: 95%;
+    margin-bottom: -142px;
+}
+
+.text {
+    margin-left: -1%;
+}
+
+
+#txtRegion {
+    margin-left: -1%;
+}
+
+.tableStyle {
+    margin-top: -40px;
+    width: 95%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: #facc9b;
+}
+
+.pay {
+    margin-bottom: -6px;
+    height: 30px;
+    width: 30px;
+}
+
+.cancelimg {
+    height: 15px;
+    width: 15px;
+}
+
+.restart {
+    height: 15px;
+    width: 15px;
+}
+
+.worldpay {
+    margin-top:-5px;
+    margin-left: -8px;
+    height: 50px;
+    width: 100px;
+}
+
+.link {
+    text-decoration:none;
+}

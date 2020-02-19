@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flowershop.com</title>
+    <link href="Styles/FlowerStyle.css" rel="StyleSheet" typeof="text/css">
+    <script src="Scripts/FlowerScript.js"></script>
+</head>
+<body>
+    <form >
+        <div class="mainDiv">
+            <h2>FLOWER SHOP ONLINE</h2>
+            <hr class="line" />
+            <div class="left">
+                <img src="Images/rose.png" class="img" />
+            </div>
+            <div class="right">
+                <h2>Secure Payment Page</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <b>Select Language</b>
+                        </td>
+                        <td style="padding-left:7%">
+                            <select class="classic" style="width: 150px">
+                                <option value="English">English</option>
+                                <option value="Tamil">Tamil</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Telugu">Telugu</option>
+                                <option value="Kannada">Kannada</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Payment method</td>
+                        <td style="padding-left:7%">
+                            <b>Visa</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Description
+                        </td>
+                        <td style="padding-left:7%">
+                            <b>Item ordered</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Amount
+                        </td>
+                        <td style="padding-left:7%">
+                            <b>&euro;100.00 </b>
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <img class="imageStyle" src="Images/logo.png" />
+                </div>
+                <table class="tableStyle" cellpadding="3">
+                    <tr style="background-color:greenyellow;color:lightyellow;">
+                        <th colspan="2">
+                            Card details
+                        </th>
+                        <div>
+                            <img src="Images/question.png" class="imageStyleQuestion" />
+
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <label>You must fill in fields marked with *</label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>* Card number</label>
+                        </td>
+                        <td>
+
+                            <input type="text" id="txtCardNumber" class="text" maxlength="16" style="width:290px;" onchange="ValidateCardNumber()" />
+                            <label id="spCardNumber" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                            <label id="spCardMessage" style="display:none;color:red;">
+                                Required
+                            </label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>*<u> Security Code</u></label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtSecCode" size="5" maxlength="3" class="text" onchange="validateSecurityCode()" />
+                            <label id="spSecCode" style="display:none;color:red">
+                                Invalid code
+                            </label>
+                            <label id="spCodeMessage" style="display:none;color:red;">
+                                Required
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>* Expiry date</label>
+                        </td>
+                        <td>
+
+                            <select class="classic text" id="listMonth" width="100" style="width: 50px;">
+                                <option value="0"></option>
+                                <option value="Jan">January</option>
+                                <option value="Feb">Feburary</option>
+                                <option value="Mar">March</option>
+                                <option value="Apr">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="Aug">August</option>
+                                <option value="Sep">September</option>
+                                <option value="Oct">October</option>
+                                <option value="Nov">November</option>
+                                <option value="Dec">December</option>
+                            </select>
+
+                            <select class="classic" id="listYear" width="100" style="width: 70px">
+                                <option value="0"></option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                            </select>
+                            <label id="spMessage" style="display:none;color:red;">
+                                Choose proper date
+                            </label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>* Cardholder's name</label>
+                        </td>
+                        <td>
+
+                            <input type="text" id="txtName" onchange="ValidateName()" maxlength="40" class="text" style="width:290px" />
+                            <label id="spName" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                            <label id="spNameMessage" style="display:none;color:red;">
+                                Required
+                            </label>
+                        </td>
+
+                    </tr>
+
+                    <tr style="background-color:greenyellow;color:lightyellow;width:95%">
+                        <th colspan="2">Cardholder details</th>
+                     
+                        <img src="Images/question.png" class="imageStyleQuestionMark" alt="?" />
+                      
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>You must fill in fields marked with *</label>
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td> <label>* Address 1</label></td>
+
+                        <td>
+
+                            <input type="text" id="txtAddress1" class="text" style="width:290px" maxlength="70" onchange="ValidateAddress()" />
+                            <label id="spAddress1" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                            <label id="spAddressMessage" style="display:none;color:red;">
+                                Required
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label> &nbsp;&nbsp; Address 2</label></td>
+                        <td>
+                            <input type="text" id="txtAddress2" class="text" style="width:290px" maxlength="70" onchange="ValidateAddress1()" />
+                            <label id="spAddress2" style="display:none;color:red;">
+                                Invalid
+                            </label>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <label> &nbsp;&nbsp; Address 3</label></td>
+                        <td>
+                            <input type="text" id="txtAddress3" class="text" style="width:290px" maxlength="70" onchange="ValidateAddress2()" />
+                            <label id="spAddress3" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>* Town/City</label></td>
+                        <td>
+
+                            <input type="text" id="txtCity" class="text" style="width:290px" maxlength="40" onchange="ValidateCity()" />
+                            <label id="spCity" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                            <label id="spCityMessage" style="display:none;color:red;">
+                                Required
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>&nbsp;&nbsp; Region</label></td>
+                        <td>
+                            <input type="text" id="txtRegion" style="width:290px" onchange="ValidateRegion()" />
+                            <label id="spRegion" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><label>* Postcode/Zip code</label></td>
+                        <td>
+                            <input type="text" id="txtPCode" size="10" class="text" maxlength="10" onchange="ValidatePCode()" />
+                            <label id="spPCode" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                            <label id="spPCodeMessage" style="display:none;color:red;">
+                                Required
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>* Country</label></td>
+                        <td>
+
+                            <select class="classic text" id="listCountry" width="100" style="width: 150px">
+                                <option value="UK">United Kingdom</option>
+                                <option value="USA">United States of America</option>
+                                <option value="India">India</option>
+                            </select>
+                             <label id="spCountry" style="display:none;color:red;">
+                                Ensure Country
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>&nbsp;&nbsp; Telephone</label></td>
+                        <td>
+                            <input type="text" id="txtPhone" size="10" onchange="ValidatePhone()" maxlength="10" class="text" />
+                            <label id="spTelephone" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>&nbsp;&nbsp; Fax</label>
+                        </td>
+                        <td>
+
+                            <input type="text" id="txtFax" size="10" class="text" maxlength="13" onchange="ValidateFax()" />
+                            <label id="spFax" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>* Email address</label>
+                        </td>
+                        <td>
+
+                            <input type="text" id="txtEmail" class="text" style="width:290px" maxlength="45" onchange="ValidateEmail()" />
+                            <label id="spEmail" style="display:none;color:red;">
+                                Invalid
+                            </label>
+                            <label id="spEmailMessage" style="display:none;color:red;">
+                                Required
+                            </label>
+                        </td>
+                    </tr>
+
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <div>
+                                <img src="Images/refresh_image.png" class="restart" />
+                            </div>
+                        </td>
+                        <td style="color:midnightblue;">
+                            <a href="" url="https://localhost:44395/FlowerPoster.html" class="link">START AGAIN</a>
+                        </td>
+                        <td rowspan="2" style="padding-left:230px;color:midnightblue;">
+                            <a href="#" class="link" onclick="ValidateFields()">MAKE PAYMENT<img src="Images/gg.png" class="pay" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <img src="Images/cancel.png" class="cancelimg" />
+                            </div>
+                        </td>
+                        <td style="color:midnightblue;">
+                            <a href="CancelPoster.html" class="link">CANCEL</a>
+                        </td>
+                    </tr>
+
+                </table>
+                <hr class="lineBottom" />
+
+                <p style="color:midnightblue">
+                    Refunds and Returns
+                </p>
+
+
+                <p style="color:midnightblue;font-size:smaller">
+                    For more information visit our <a href="">Refunds and Returns Policy.</a>
+                </p>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="Images/worldpay.gif" class="worldpay" />
+                        </td>
+                        <td style="color:midnightblue;font-size:smaller;padding-left:120px;padding-bottom:27px;">
+                            For help with your payment visit the <a href="">WorldPay Help</a>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <table style="width:100%;height:50px;border-collapse:collapse;background-color:#facc9b;">
+                <tr style="background-color:greenyellow;color:midnightblue;font-family:Arial;font-size:x-large;width:100%">
+                    <td align="center">
+                        <b>Thank you for shopping at Flowershop. Have a nice day</b>
+                    </td>
+            </table>
+
+        </div>
+    </form>
+
+</body>
+
+</html>
